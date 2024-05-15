@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 function Card({ width, flag, hoverr = "false", heading }) {
     return (
-        <motion.div whileHover={{ backgroundColor: hoverr === "true" && "#7443ff", padding: "25px" }} className={`${width} bg-zinc-700 p-5 rounded-xl flex flex-col justify-between`}>
+        <motion.div whileHover={{ backgroundColor: hoverr === "true" && "#7443ff", padding: "25px" }} className={`${width} bg-zinc-800 p-5 rounded-xl flex flex-col justify-between`}>
             <div className='w-full'>
                 <div className='w-full flex items-center justify-between'>
                     <h3>Get in Touch</h3>

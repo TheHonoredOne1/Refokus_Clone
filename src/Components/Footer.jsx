@@ -2,14 +2,14 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div className='w-full bg-zinc-800'>
+        <div className='w-full bg-zinc-900'>
             <div className='max-w-screen-xl mx-auto py-10 flex gap-20'>
                 <div className='basis-1/2'>
                     <h1 className='text-[11rem] font-semibold leading-none tracking-tight'>refokus.</h1>
                 </div>
 
 
-                <div className='basis-1/2 bg-zinc-800 gap-5 flex'>
+                <div className='basis-1/2 bg-zinc-900 gap-5 flex'>
 
 
                     <div className='basis-1/3'>

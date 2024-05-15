@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import Product from './Product'
 import { motion } from 'framer-motion'
+import arqitel from "../assets/arqitel.mp4";
+import ttr from "../assets/ttr.mp4";
+import yir from "../assets/yir.mp4";
+import yahoo from "../assets/yahoo.mp4";
+import rainfall from "../assets/rainfall.mp4";
 function Products() {
 
     let products = [
@@ -19,7 +24,7 @@ function Products() {
     }
 
     return (
-        <div className='relative bg-zinc-800 flex flex-col items-center justify-center'>
+        <div className='relative bg-zinc-900 flex flex-col items-center justify-center'>
             {products.map((elem, index) => <Product key={index} item={elem} mover={mover} ind={index} />)}
             <div className='w-full h-full absolute top-0 pointer-events-none'>
                 <motion.div initial={{ y: pos }}
@@ -27,11 +32,51 @@ function Products() {
                     transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
                     className='window w-[32rem] h-[23rem] absolute left-[28%] bg-white overflow-hidden '>
 
-                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full bg-sky-100 '></motion.div>
-                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full bg-sky-200 '></motion.div>
-                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full bg-sky-300 '></motion.div>
-                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full bg-sky-400 '></motion.div>
-                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full bg-sky-500 '></motion.div>
+                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full'>
+                        <video
+                            className="absolute object-cover rounded-3xl"
+                            autoPlay
+                            muted
+                            loop
+                            src={arqitel}
+                        ></video>
+                    </motion.div>
+                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full'>
+                        <video
+                            className="absolute object-cover rounded-3xl"
+                            autoPlay
+                            muted
+                            loop
+                            src={ttr}
+                        ></video>
+                    </motion.div>
+                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full'>
+                        <video
+                            className="absolute object-cover rounded-3xl"
+                            autoPlay
+                            muted
+                            loop
+                            src={yir}
+                        ></video>
+                    </motion.div>
+                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full'>
+                        <video
+                            className="absolute object-cover rounded-3xl"
+                            autoPlay
+                            muted
+                            loop
+                            src={yahoo}
+                        ></video>
+                    </motion.div>
+                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full'>
+                        <video
+                            className="absolute object-cover rounded-3xl"
+                            autoPlay
+                            muted
+                            loop
+                            src={rainfall}
+                        ></video>
+                    </motion.div>
 
                 </motion.div>
             </div>
