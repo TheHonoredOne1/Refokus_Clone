@@ -42,7 +42,7 @@ function Work() {
 
     return (
 
-        <div className='w-full'>
+        <div className='w-full mt-2'>
 
             <div className='relative max-w-screen-xl mx-auto text-center'>
 
