@@ -4,6 +4,7 @@ import Work from './Components/Work'
 import Stripes from './Components/Stripes'
 import Products from './Components/Products'
 import Marquees from './Components/Marquees'
+import Cards from './Components/Cards'
 function App() {
   return (
     <div className='w-full h-screen bg-zinc-800 text-white'>
@@ -11,7 +12,8 @@ function App() {
       <Work />
       <Stripes />
       <Products />
-      <Marquees/>
+      <Marquees />
+      <Cards />
     </div>
   )
 }
