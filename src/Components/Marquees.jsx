@@ -30,7 +30,7 @@ function Marquees() {
 
     return (
         <div className='bg-zinc-800 py-20'>
-            {images.map((item, index) => (<Marquee urls={item} />))}
+            {images.map((item, index) => (<Marquee key = {index} urls={item} />))}
         </div>
     )
 }

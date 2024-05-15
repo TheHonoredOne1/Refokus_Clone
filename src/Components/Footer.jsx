@@ -14,13 +14,13 @@ function Footer() {
 
                     <div className='basis-1/3'>
                         <h4 className='mb-10'>Socials</h4>
-                        {["instagram", "twitter", "linkedin"].map((item, index) => <a className='block mt-3 text-zinc-500 capitlize'>{item}</a>)}
+                        {["instagram", "twitter", "linkedin"].map((item, index) => <a key={index} className='block mt-3 text-zinc-500 capitlize'>{item}</a>)}
                     </div>
 
 
                     <div className='basis-1/3'>
                         <h4 className='mb-10'>Sitemaps</h4>
-                        {["Home", "Work", "Careers", "Contact"].map((item, index) => <a className='block mt-3 text-zinc-500 capitlize'>{item}</a>)}
+                        {["Home", "Work", "Careers", "Contact"].map((item, index) => <a key = {index} className='block mt-3 text-zinc-500 capitlize'>{item}</a>)}
                     </div>
 
                     <div className='basis-1/3 flex flex-col items-end'>

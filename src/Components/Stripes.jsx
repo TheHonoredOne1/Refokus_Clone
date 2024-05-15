@@ -12,7 +12,7 @@ function Stripes() {
     return (
         <div className='flex mt-10 justify-center'>
             {stripe_data.map((item, index) => {
-                return <Stripe str = {item} />
+                return <Stripe key={index} str={item} />
             })}
         </div>
     )

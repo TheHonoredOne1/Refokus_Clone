@@ -1,8 +1,8 @@
 import React from 'react'
 import { FaArrowRightLong } from "react-icons/fa6";
-function Card({ width, flag }) {
+function Card({ width, flag , hoverr}) {
     return (
-        <div className={`${width} bg-zinc-700 p-5 rounded-xl flex flex-col justify-between`}>
+        <div className={`${width} bg-zinc-700 p-5 rounded-xl flex flex-col justify-between ${(hoverr)&&('hover: bg-violet-500')}`}>
             <div className='w-full'>
                 <div className='w-full flex items-center justify-between'>
                     <h3>HELLO</h3>

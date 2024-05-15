@@ -14,7 +14,7 @@ function Products() {
     return (
         <div className='bg-zinc-800 flex flex-col items-center justify-center'>
             {
-                products.map((elem, index) => <Product item = {elem} />)
+                products.map((elem, index) => <Product key = {index} item = {elem} />)
             }
         </div>
     )
