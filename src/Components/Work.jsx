@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 
 function Work() {
+
     const [images, setImages] = useState([
         {
             url: "https://assets-global.website-files.com/6334198f239547d0f9cd84b3/634ef09178195ce0073e38f3_Refokus%20Tools-1.png",
@@ -50,7 +51,7 @@ function Work() {
         function imagesShow(arr) {
             setImages((prev) =>
                 prev.map((item, index) =>
-                     arr.indexOf(index) === -1
+                    arr.indexOf(index) === -1
 
                         ? { ...item, isActive: false }
                         : { ...item, isActive: true }
@@ -84,6 +85,8 @@ function Work() {
     }
     )
     ////////////////////////////////////////////////////////////////
+
+    
     return (
 
         <div className='w-full mt-2'>

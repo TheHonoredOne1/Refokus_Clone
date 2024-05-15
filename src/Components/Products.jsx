@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Product from './Product'
+import { motion } from 'framer-motion'
 function Products() {
 
     let products = [
@@ -11,11 +12,29 @@ function Products() {
     ]
 
 
+    const [pos, setPos] = useState(0)
+
+    const mover = (val) => {
+        setPos(val * 23)
+    }
+
     return (
-        <div className='bg-zinc-800 flex flex-col items-center justify-center'>
-            {
-                products.map((elem, index) => <Product key = {index} item = {elem} />)
-            }
+        <div className='relative bg-zinc-800 flex flex-col items-center justify-center'>
+            {products.map((elem, index) => <Product key={index} item={elem} mover={mover} ind={index} />)}
+            <div className='w-full h-full absolute top-0 pointer-events-none'>
+                <motion.div initial={{ y: pos }}
+                    animate={{ y: pos + `rem` }}
+                    transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
+                    className='window w-[32rem] h-[23rem] absolute left-[28%] bg-white overflow-hidden '>
+
+                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full bg-sky-100 '></motion.div>
+                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full bg-sky-200 '></motion.div>
+                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full bg-sky-300 '></motion.div>
+                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full bg-sky-400 '></motion.div>
+                    <motion.div animate={{ y: -pos + `rem` }} transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.5 }} className='w-full h-full bg-sky-500 '></motion.div>
+
+                </motion.div>
+            </div>
         </div>
     )
 }
